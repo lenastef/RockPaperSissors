@@ -28,10 +28,12 @@ public class StonePaperScissors {
     }
 
 
+    @edu.umd.cs.findbugs.annotations.SuppressFBWarnings("DM_DEFAULT_ENCODING")
     public static void main(String[] args) {
-        // print out the result of the game
-        System.out.println(StonePaperScissors.play("rock"));
-        System.out.println(StonePaperScissors.play("paper"));
-        System.out.println(StonePaperScissors.play("scissors"));
+        // get player choice
+        System.out.println("Enter rock, paper or scissors: ");
+        String playerChoice = new java.util.Scanner(System.in).nextLine();
+        System.out.println(StonePaperScissors.play(playerChoice));
+
     }
 }
